@@ -1,0 +1,360 @@
+// ＝＝＝＝＝＝＝＝ 
+// 全体設計ここから
+// ＝＝＝＝＝＝＝＝
+body{
+font-family: dnp-shuei-gothic-gin-std, YuGothic, Yu Gothic, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+background: #F9F9F9;
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// ヘッダーCSSここから
+// ＝＝＝＝＝＝＝＝
+
+header{ 
+  width: 100%;
+  height: 500px;
+  background-image: url(img/header_img.png);
+
+  .header_top{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  
+  h1 a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+      color: gray;
+    }
+  }
+
+   ul{
+      margin-left: 300px;
+      display: flex;
+      li{
+      list-style: none;
+        a{
+          font-size: 14px;
+          text-decoration: none;
+          color: black;
+          padding: 40px;
+          &:hover{
+            color: gray;
+          }
+          }
+        }
+      }
+  
+  .serch{
+    margin-left: 200px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    &:hover{
+      background: gray;
+    }
+      img{
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+      }
+    } 
+  }
+
+  .header_sns{
+    // ここのコードどうでしょうか？
+    display: flex;
+    margin-right: 20px;
+    margin-top: 220px;
+    align-items:flex-end;
+    justify-content: flex-end; 
+    flex-direction: column;
+
+    li{
+      list-style: none;
+      width: 30px;
+      height: 30px;
+      background: white;
+      margin-top: 20px;
+      &:hover{
+        background: gray;
+      }
+      a{
+      }
+      img{
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// Aboutme CSSここから
+// ＝＝＝＝＝＝＝＝
+.aboutme_content{
+    height: 200px;
+    width: 600px;
+    margin: 85px auto;
+    background-image: url(img/aboutme.png);
+    // &:hover{
+    //   background-color: rgba(0, 0, 0, 0.7);
+    // }
+    a{
+      text-decoration: none;  
+      p{
+      color: black;
+      text-decoration: none;
+      position: absolute;
+      margin-top: 80px;
+      margin-left: 350px;
+      letter-spacing: 3px;
+        span{
+          font-size: 28px; 
+          font-weight: bold;   
+          // アニメーションを後ほど設置する
+        }
+      }
+    }
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// News共通 ここから
+// ＝＝＝＝＝＝＝＝
+.newsbox{
+  width: 90%;
+  height: 670px;
+  background: white;
+  margin: 0 auto 40px auto;
+  .newstitle{
+    padding-top: 60px;
+    h2{
+      text-align: center;
+      letter-spacing: 8px;
+      font-size: 25px;
+      line-height: 25px;
+      span{
+        line-height: 15px;
+        font-size: 15px;
+        color: gray;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+
+.newscontent {
+    width: 1000px;
+    margin: 80px auto 50px auto;
+    ul{
+      display: flex;
+      margin: 0 auto;
+      padding-inline-start: 0px;
+      li{
+        list-style: none;
+        margin-right: 30px;
+      li:last-child{
+        margin-right: 0px;
+      }
+        a {
+          text-decoration: none;
+          color: black;
+          position: relative;
+          img {
+            width: 310px;
+            height: 180px;
+          }
+          p {
+            background:#f9f9f9;
+            width: 100px;
+            text-align: center;
+            font-size: 13px;
+            position: absolute;
+            top: -187px;
+            left: 200px;
+          }
+        }
+        dl{
+          margin: 0;
+          width: 310px;
+          dt {
+            font-size: 11px;
+            color: #B4B4B4;
+          }
+          dd{
+            padding-top: 10px;
+            font-size: 16px;
+            margin-left: 0;
+            font-weight: bold;
+          }
+        }
+      }   
+    }
+}
+
+.newsbox_btn{
+  width: 260px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  &:hover{
+    background-color: #333;
+    transition: all 0.4s;
+  }
+  a{
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px;
+    &:hover{
+      color: white;
+      transition: all 0.4s;
+    }
+    }
+    
+  }
+
+// ＝＝＝＝＝＝＝＝ 
+// メイン画像ここから
+// ＝＝＝＝＝＝＝＝
+.mainimg{
+  margin: 50px auto;
+  width: 720px;
+  height: 400px;
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// カテゴリー一覧ここから
+// ＝＝＝＝＝＝＝＝
+
+.category{
+  width: 90%;
+  background: white;
+  height: auto;
+  margin: 0 auto;
+  .newstitle{
+    padding: 60px 0;
+    h2{
+      text-align: center;
+      letter-spacing: 8px;
+      font-size: 25px;
+      line-height: 25px;
+      span{
+        line-height: 15px;
+        font-size: 15px;
+        color: gray;
+        letter-spacing: 4px;
+      }
+    }
+  }
+  ul{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    margin: 0 auto;
+    li{
+      list-style: none;
+      width: 500px;
+      height: auto;
+      padding-bottom: 60px;
+      // display: flex;
+      //後ほど
+      img{
+        width: 100%;
+        height: 270px;
+      }
+      dl{  
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        dd{
+          margin-top: 10px;
+          text-align: center;
+          width: 245px;
+          background: #f3f3f3;  
+          margin-inline-start: 0;
+          a{
+            font-size: 14px;
+            line-height: 15px;  
+            text-decoration: none;
+            color: black;
+          
+          }
+        }
+      }
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// フッターここから
+// ＝＝＝＝＝＝＝＝
+
+footer{
+  width: 100%;
+  height: 240px;
+  background: black;
+  .footer_title{
+    text-align: center;
+    padding: 40px 0;
+    h2{
+      line-height: 20px;
+      font-size: 40px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      letter-spacing: 8px;
+      a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+          color: #B4B4B4;
+        }
+        span{
+          font-size: 5px;
+          line-height: 12px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+  ul{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    li{
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        &:hover{
+          color: #B4B4B4;
+        }
+      }
+    }
+  }
+  p{
+    font-size: 10px;
+    color: #B4B4B4;
+    margin-top: 70px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+    
+
+
+
+
+
