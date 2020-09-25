@@ -14,6 +14,7 @@ header .header_top {
   width: 100%;
   height: 100px;
   align-items: center;
+  position: relative;
 }
 
 header .header_top h1 a {
@@ -62,6 +63,10 @@ header .header_top .serch img {
   padding: 10px;
 }
 
+header .hb_menu {
+  transform: translateY(-9999px);
+}
+
 header .header_sns {
   display: flex;
   margin-right: 20px;
@@ -92,7 +97,7 @@ header .header_sns li img {
 .aboutme_content {
   height: 200px;
   width: 600px;
-  margin: 85px auto;
+  margin: 20px auto 85px auto;
   background-image: url(img/aboutme.png);
 }
 
@@ -112,6 +117,10 @@ header .header_sns li img {
 .aboutme_content a p span {
   font-size: 28px;
   font-weight: bold;
+}
+
+.headerbottom_nav {
+  visibility: hidden;
 }
 
 .newsbox {
@@ -407,6 +416,87 @@ footer p {
 }
 
 @media (max-width: 1020px) {
+  header {
+    height: 250px;
+  }
+  header .header_top {
+    height: 50px;
+    position: relative;
+  }
+  header .header_top ul {
+    display: none;
+  }
+  header .header_top .serch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  header .header_sns {
+    margin-top: 20px;
+  }
+  header .hb_menu {
+    transform: translateY(0);
+    position: absolute;
+    right: -40px;
+    top: 30px;
+  }
+  header .hb_menu #input {
+    display: none;
+  }
+  header .hb_menu .line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 8px;
+  }
+  header .hb_menu #content {
+    background: white;
+    width: 100%;
+    height: 100%;
+    transform: translateX(2000px);
+  }
+  header .hb_menu #content ul li {
+    padding: 20px 0 10px 0;
+    list-style: none;
+    width: 80%;
+    border-bottom: 2px solid black;
+  }
+  header .hb_menu #content ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  header .hb_menu #content ul li a:hover {
+    color: #B4B4B4;
+  }
+  header .hb_menu #input:checked ~ #content {
+    transform: translateX(-1200px);
+  }
+  .headerbottom_nav {
+    margin: 0 auto;
+    visibility: visible;
+    width: 70%;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .headerbottom_nav nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .headerbottom_nav li {
+    list-style: none;
+    text-align: center;
+  }
+  .headerbottom_nav li a {
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .headerbottom_nav li a:active {
+    font-weight: bold;
+    background: #f3f3f3;
+  }
   footer ul li a {
     font-size: 12px;
   }
@@ -416,12 +506,15 @@ footer p {
   .aboutme_content {
     width: 95%;
     height: 150px;
-    margin: 40px auto;
+    margin: 40px auto 40px auto;
     box-sizing: border-box;
+    position: relative;
   }
   .aboutme_content a p {
-    margin-top: 70px;
-    margin-left: 370px;
+    position: absolute;
+    left: 60%;
+    top: 60%;
+    margin: 0;
   }
   .aboutme_content a p span {
     font-size: 20px;
@@ -457,18 +550,19 @@ footer p {
   .newscontent ul {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
   .newscontent ul li {
-    width: 100%;
+    width: 250px;
     margin-bottom: 20px;
     display: flex;
   }
-  .newscontent ul li img {
-    width: 40%;
+  .newscontent ul li a .newcontet_img {
+    width: 250px;
     height: auto;
   }
   .newscontent ul li dl {
-    width: 50%;
+    width: 250px;
   }
   .newscontent ul li dl dt {
     font-size: 12px;

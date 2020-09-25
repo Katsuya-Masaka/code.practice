@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>WebSite/Clone</title>
     <link rel="stylesheet" href="styles.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   </head>
   <body>
@@ -21,6 +22,24 @@
           </ul>
         </nav>
         <a href="#" class="serch"><img src="img/magnifying-glass.png" alt="検索する"></a>
+      </div>
+
+      <!-- ハンバーガーメニューの作成 -->
+      <div class="hb_menu">
+        <input type="checkbox" id="input">
+        <label for="input">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+
+        <div id="content">
+          <ul class="list">
+            <li><a href="#">トバログについて</a></li>
+            <li><a href="#">ポートフォリオ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
       </div>
 
       <ul class="header_sns">
@@ -43,6 +62,19 @@
     </header>
     <!-- ヘッダーここまで -->
 
+    <!-- レスポンシブ用navここから -->
+    <div class="headerbottom_nav">
+      <nav>
+        <ul>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">新着情報</a></li>
+          <li><a href="#">カテゴリー</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- レスポンシブ用navここまで -->
+
     <!-- About meここから -->
     <div class="aboutme_content">
        <a href="#">
@@ -64,8 +96,7 @@
 
         <div class="newscontent">
           <ul>
-            <li>
-              
+            <li>     
               <a href="#">
                 <div class="newcontet_img">
                  <img src="img/news1-1.png" alt="記事サイト">
@@ -77,6 +108,7 @@
                 </dl>
               </a>
             </li>
+
             <li>
               <a href="#">
                 <div class="newcontet_img">
@@ -89,6 +121,7 @@
               </dl>
             </a>
             </li>
+
             <li>
               <a href="#">
                 <div class="newcontet_img">
@@ -117,8 +150,9 @@
         <h2>人気の記事<br>
         <span>POPULAR</span></h2>
 
-               <div class="newscontent">
+       <div class="newscontent">
           <ul>
+
             <li>
               <a href="#">
                 <div class="newcontet_img">
@@ -131,6 +165,7 @@
               </dl>
             </a>
             </li>
+
             <li>
               <a href="#">
                 <div class="newcontet_img">
@@ -143,6 +178,7 @@
               </dl>
             </a>
             </li>
+
             <li>
               <a href="#">
                 <div class="newcontet_img">
@@ -155,6 +191,7 @@
               </dl>
             </a>
             </li>
+
           </ul>
        </div>
 
