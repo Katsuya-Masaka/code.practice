@@ -99,11 +99,10 @@ header{
     width: 600px;
     margin: 85px auto;
     background-image: url(img/aboutme.png);
-    // &:hover{
-    //   background-color: rgba(0, 0, 0, 0.7);
-    // }
+    &:before{ 
+    }
     a{
-      text-decoration: none;  
+      text-decoration: none;
       p{
       color: black;
       text-decoration: none;
@@ -113,8 +112,7 @@ header{
       letter-spacing: 3px;
         span{
           font-size: 28px; 
-          font-weight: bold;   
-          // アニメーションを後ほど設置する
+          font-weight: bold; 
         }
       }
     }
@@ -146,7 +144,8 @@ header{
 }
 
 .newscontent {
-    width: 1000px;
+    box-sizing: border-box;
+    width: 100%;
     margin: 80px auto 50px auto;
     ul{
       display: flex;
@@ -154,31 +153,38 @@ header{
       padding-inline-start: 0px;
       li{
         list-style: none;
-        margin-right: 30px;
-      li:last-child{
-        margin-right: 0px;
-      }
+        margin: 0 auto;
+        width: 30%;
+        overflow:hidden;
         a {
           text-decoration: none;
           color: black;
           position: relative;
           img {
-            width: 310px;
-            height: 180px;
+            transition: all 0.5s;
+            width: 100%;
+            height: auto;
+            &:hover{
+              transform:scale(1.05,1.05);
+            }
           }
           p {
+            line-height: auto;
             background:#f9f9f9;
             width: 100px;
             text-align: center;
             font-size: 13px;
             position: absolute;
-            top: -187px;
-            left: 200px;
+            top: -11px;
+            right: 0;
           }
         }
         dl{
           margin: 0;
-          width: 310px;
+          width: auto;
+          &:hover{
+            color: #B4B4B4;
+          }
           dt {
             font-size: 11px;
             color: #B4B4B4;
@@ -206,6 +212,8 @@ header{
     transition: all 0.4s;
   }
   a{
+    display: inline-block;
+    width: 260px;
     line-height: 50px;
     text-decoration: none;
     color: black;
@@ -225,6 +233,13 @@ header{
   margin: 50px auto;
   width: 720px;
   height: 400px;
+  img{
+    transition: all 0.2s;
+  &:hover{
+    display: block;
+    filter:brightness(105%); 
+   }
+ }
 }
 
 // ＝＝＝＝＝＝＝＝ 
@@ -261,15 +276,41 @@ header{
     margin: 0 auto;
     li{
       list-style: none;
-      width: 500px;
+      width: 48%;
       height: auto;
       padding-bottom: 60px;
-      // display: flex;
-      //後ほど
-      img{
-        width: 100%;
-        height: 270px;
+      .category_img{
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.5);
+        }
+        .category_title{
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          text-align: center;
+          color: white;
+          line-height: 10px;
+          letter-spacing: 4px;
+          p{
+            font-size: 12px;
+          }
+        }
+       img{
+         width: 100%;
+         height: auto;
       }
+    }
+    
       dl{  
         display: flex;
         justify-content: space-between;
@@ -277,11 +318,11 @@ header{
         dd{
           margin-top: 10px;
           text-align: center;
-          width: 245px;
+          width: 49%;
           background: #f3f3f3;  
           margin-inline-start: 0;
           a{
-            font-size: 14px;
+            font-size: 12px;
             line-height: 15px;  
             text-decoration: none;
             color: black;
@@ -296,7 +337,6 @@ header{
 // ＝＝＝＝＝＝＝＝ 
 // フッターここから
 // ＝＝＝＝＝＝＝＝
-
 footer{
   width: 100%;
   height: 240px;
@@ -326,7 +366,7 @@ footer{
   }
   ul{
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     li{
@@ -348,13 +388,162 @@ footer{
   }
 }
 
+// △残課題
+// 1.ヘッダーアニメーション
+// 2.Aboutmeアニメーション
+// 3.カテゴリー内の文字の調整
+
+
+// ＝＝＝＝＝＝＝＝ 
+// ＝＝＝＝＝＝＝＝ 
+//タブレッドサイズ作成
+// ＝＝＝＝＝＝＝＝
+// ＝＝＝＝＝＝＝＝
+
+@media (max-width: 1020px)  {
+// タブレッドTODO
+// 1.ヘッダーh1を横並びにする(大元調整？)
+    // --ヘッダーのイメージ画像も調整
+// 2.ナブタグを横並びにする(大元調整？)
+// 3.カテゴリーを横並べにする=>解決
+footer ul li a{
+  font-size: 12px;
+}
+
+
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// ＝＝＝＝＝＝＝＝ 
+//スマホサイズ作成
+// ＝＝＝＝＝＝＝＝
+// ＝＝＝＝＝＝＝＝
+
+@media (max-width: 767px) {
+// スマホサイズTODO
+// 1.ハンバーガーメニューの作成
+// 2. 画像の下にnavを持ってくる
+
+// 3.aboutmeの横幅=>解決
+.aboutme_content{
+  width: 95%;
+  height: 150px;
+  margin: 40px auto;
+  box-sizing: border-box;
+  a p{
+    margin-top: 70px;
+    margin-left: 370px;
+    span{
+      font-size: 20px;
+      font-weight: normal;
+    }
+  }
+}
+// 4.Newsのレイアウト =>横並びにする
+.newsbox{
+  height: auto;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  .newstitle{
+    padding-top: 30px;
+    h2{
+      font-size: 20px;
+      line-height: 20px;
+      span{
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+  .newsbox_btn{
+    height: 40px;
+    a{
+      line-height: 40px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
+
+.newscontent {
+  margin: 30px auto 30px auto;
+  ul{
+    display: flex;
+    flex-direction: column;
+    li{
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+        img{
+          width: 40%;
+          height: auto;
+        }
+      dl{
+        width: 50%;
+        dt{
+          font-size: 12px;
+          dd{
+            font-size: 13px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 5.メイン画像サイズ =>解決
+.mainimg{
+  width: 450px;
+  height: 300px;
+  margin: 0 auto;
+  img{
+    width: 450px;
+  }
+}
+// 6.カテゴリー一覧サイズ =>解決
+.category{
+  height: auto;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  .newstitle{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    h2{
+      font-size: 20px;
+      line-height: 20px;
+      span{
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  li{
+    width: 100%;
+    padding-bottom: 10px;
+    .category_img{
+      height: 150px;
+     img{
+       height: 150px;
+    }
+  }
+  
+    dl dd{
+      width: 33%;}
+      }
+    }
+  }
 
 
 
-
-    
-
-
-
-
+// 7.フッターーの子要素＋コピーらいと調整 =>解決
+footer ul li a{
+  font-size: 10px;
+}
+}
 
